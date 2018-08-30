@@ -714,3 +714,13 @@ Processing by ArtistsController#show as HTML
   [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?  [["artist_id", 1]]
   Rendered artists/show.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/1" for 104.244.193.160 at 2018-08-30 12:45:57 +0000
+Cannot render console from 104.244.193.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms)
