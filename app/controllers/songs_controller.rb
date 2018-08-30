@@ -11,7 +11,7 @@ class SongsController < ApplicationController
   end
 
   def show
-    if params[:artist_id] && Artist.find_by_id(params[:artist_id])
+    if params[:artist_id] && Artist.find_by_id(params[:artist_id]).songs.find_by_id(params[:id])
       @artist = Artist.find_by_id(params[:artist_id])
       @song = @artist.songs.find_by_id(params[:id])
     elsif params[:artist_id]
